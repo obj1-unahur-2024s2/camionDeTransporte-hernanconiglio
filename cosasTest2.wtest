@@ -1,4 +1,4 @@
-import cosas.*
+import cosas2.*
 
 describe "test de las cosas del ejercicio camion de transporte" {
 

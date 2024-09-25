@@ -1,8 +1,15 @@
+import cosas2.*
 object camion {
-    const carga = []
+    const property carga = []
 
-    method cargar(algo) { carga.add(algo) }
-    method cargarVariasCosas(listaCosas) {carga.addAll(listaCosas)}
+    method cargar(algo) { 
+        carga.add(algo)
+        algo.consecuenciaDeCarga()
+    }
+    method cargarVariasCosas(listaCosas) {
+        carga.addAll(listaCosas)
+        listaCosas.forEach({c=>c.consecuenciaDeCarga()})
+    }
     method descargar(algo) { carga.remove(algo) }
 
     method cargaTotal() = carga.sum({c => c.peso()})
